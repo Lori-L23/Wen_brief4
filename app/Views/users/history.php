@@ -14,19 +14,12 @@
             <li>
                 <a href="index.php?action=dashboardadmin" class="block hover:text-blue-300">Accueil</a>
             </li>
+
             <li>
-                <a href="index.php?action=utilisateur" class="block hover:text-blue-300">Gérer les utilisateurs</a>
+                <a href="index.php?action=editProfile" class="block hover:text-blue-300">Modifier le profil</a>
             </li>
             <li>
-                <a href="index.php?action=addUser" class="block hover:text-blue-300">Ajouter un utilisateur</a>
-            </li>
-            <li>
-                <a href="index.php?action=editUser" class="block hover:text-blue-300">Modifier un utilisateur</a>
-            </li>
-            <li>
-                <a href="index.php?action=utilisateuruser" class="block hover:text-blue-300">Liste des utilisateurs</a>
-            </li>
-            <li>
+        
                 <a href="index.php?action=sessions" class="block hover:text-blue-300">Historique des connexions</a>
             </li>
             <li>
@@ -37,13 +30,15 @@
 
     <!-- Contenu principal -->
     <div class="flex-1 p-6">
-        <h1 class="text-2xl font-bold mb-6">Historique des connexions</h1>
+        <h1 class="text-2xl font-bold mb-6 text-purple-500">Historique des connexions</h1>
         <table class="min-w-full bg-white">
             <thead>
                 <tr>
                     <th class="py-2 px-4 border">ID</th>
                     <th class="py-2 px-4 border">Utilisateur</th>
-                    <th class="py-2 px-4 border">Date de connexion</th>
+                    <th class="py-2 px-4 border">heure de connexion</th>
+                    <th class="py-2 px-4 border">heure de deconnexion</th>
+
                 </tr>
             </thead>
             <tbody>
@@ -52,6 +47,8 @@
                         <td class="py-2 px-4 border"><?php echo $entry['id']; ?></td>
                         <td class="py-2 px-4 border"><?php echo $entry['user_id']; ?></td>
                         <td class="py-2 px-4 border"><?php echo $entry['login_time']; ?></td>
+                        <td class="py-2 px-4 border"><?php echo $entry['logout_time']; ?></td>
+
                     </tr>
                 <?php endforeach; ?>
             </tbody>

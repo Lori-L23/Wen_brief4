@@ -1,14 +1,17 @@
 <?php
 require_once __DIR__ . '/../models/UserModel.php';
 
-class AuthController {
+class AuthController
+{
     private $userModel;
 
-    public function __construct($db) {
+    public function __construct($db)
+    {
         $this->userModel = new UserModel($db);
     }
 
-    public function login() {
+    public function login()
+    {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $email = $_POST['email'];
             $password = $_POST['password'];
@@ -24,37 +27,39 @@ class AuthController {
             } else {
                 // Afficher un message d'erreur
                 $error = "Email ou mot de passe incorrect.";
-                require_once __DIR__ . '../../views/login.php';
+                require_once __DIR__ . '../../Views/login.php';
             }
         } else {
-            require_once __DIR__ . '../../views/login.php';
+            require_once __DIR__ . '../../Views/users/dashboard.php';
         }
     }
 
-    public function logout() {
+    public function logout()
+    {
         session_start();
         session_destroy();
         header('Location: index.php?action=login');
         exit();
     }
 
-    public function register() {
+    public function register()
+    {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $username = $_POST['username'];
             $email = $_POST['email'];
             $password = $_POST['password'];
+            $role_id = $_POST['role_id']; // Récupérer le role_id depuis le formulaire
 
             // Vérifier si l'email est déjà utilisé
             $existingUser = $this->userModel->getUserByEmail($email);
             if ($existingUser) {
                 $error = "Cet email est déjà utilisé.";
-                require_once __DIR__.  '../../Views/regiter.php';
+                require_once __DIR__ . '../../views/register.php';
                 return;
             }
 
             // Créer un nouvel utilisateur
-            if ($this->userModel->createUser($username, $email, $password)) {
-                // Rediriger vers la page de connexion après l'inscription
+            if ($this->userModel->createUser($username, $email, $password, $role_id)) {
                 header('Location: index.php?action=login');
                 exit();
             } else {
@@ -62,8 +67,7 @@ class AuthController {
                 require_once __DIR__ . '../../views/register.php';
             }
         } else {
-            require_once __DIR__ . '../../Views/regiter.php';
+            require_once __DIR__ . '../../views/register.php';
         }
     }
 }
-?>
