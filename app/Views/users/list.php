@@ -19,9 +19,7 @@
                 <li>
                     <a href="index.php?action=utilisateur" class="block hover:text-blue-300">Gérer les utilisateurs</a>
                 </li>
-                <li>
-                    <a href="index.php?action=addUser" class="block hover:text-blue-300">Ajouter un utilisateur</a>
-                </li>
+            
                 <li>
                     <a href="index.php?action=sessions" class="block hover:text-blue-300">Historique des connexions</a>
                 </li>
@@ -51,7 +49,7 @@
                         <td class="py-2 px-4 border"><?php echo $user['id']; ?></td>
                         <td class="py-2 px-4 border"><?php echo $user['username']; ?></td>
                         <td class="py-2 px-4 border"><?php echo $user['email']; ?></td>
-                        <td class="py-2 px-4 border"><?php echo $user['role'] ?? 'Non défini'; ?></td>
+                        <td class="py-2 px-4 border"><?php echo $user['role_id'] ?? 'Non défini'; ?></td>
                         <td class="py-2 px-4 border"><?php echo $user['is_active'] ? 'Actif' : 'Inactif'; ?></td>
                         <td class="py-2 px-4 border">
                             <a href="index.php?action=editUser&id=<?php echo $user['id']; ?>" class="text-blue-500">Modifier</a>

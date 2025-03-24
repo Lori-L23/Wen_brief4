@@ -47,6 +47,13 @@
                 <?php endforeach; ?>
             </tbody>
         </table>
+        <div class="mt-10 justify-around">
+            <a href="index.php?action=addUser" class="border border-white text-purple-700 mb-6"> Ajouter un utilisateur</a>
+            <a href="index.php?action=edit" class="border border-white text-purple-700 mb-6">Modifier un utilisateur</a>
+            <a href="index.php?action=utilisateuruser" class="border border-white text-purple-700 mb-6">Liste des utilisateurs</a>
+</div>
+
+
     </div>
 </div>
 </body>

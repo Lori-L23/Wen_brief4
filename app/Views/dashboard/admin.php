@@ -17,15 +17,7 @@
             <li>
                 <a href="index.php?action=utilisateur" class="block hover:text-blue-300">Gérer les utilisateurs</a>
             </li>
-            <li>
-                <a href="index.php?action=addUser" class="block hover:text-blue-300">Ajouter un utilisateur</a>
-            </li>
-            <li>
-                <a href="index.php?action=editUser" class="block hover:text-blue-300">Modifier un utilisateur</a>
-            </li>
-            <li>
-                <a href="index.php?action=utilisateuruser" class="block hover:text-blue-300">Liste des utilisateurs</a>
-            </li>
+
 
             <li>
                 <a href="index.php?action=sessions" class="block hover:text-blue-300">Historique des connexions</a>
@@ -39,7 +31,7 @@
     <!-- Contenu principal -->
     <div class="flex-1 p-6">
         <h1 class="text-2xl font-bold mb-6">Tableau de bord Admin</h1>
-        <p>Bienvenue sur le tableau de bord administrateur.</p>
+        <p>Bienvenue cher administrateur.</p>
     </div>
 </div>
 </body>

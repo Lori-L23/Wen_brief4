@@ -54,8 +54,8 @@
             <div class="mb-4">
                 <label for="role" class="block text-gray-700">Rôle:</label>
                 <select name="role" id="role" class="w-full p-2 border rounded">
-                    <option value="user" <?php echo $user['role_id'] === 'user' ? 'selected' : ''; ?>>Utilisateur</option>
-                    <option value="admin" <?php echo $user['role_id'] === 'admin' ? 'selected' : ''; ?>>Administrateur</option>
+                    <option value="6" <?php echo $user['role_id'] === 'user' ? 'selected' : ''; ?>>Utilisateur</option>
+                    <option value="1" <?php echo $user['role_id'] === 'admin' ? 'selected' : ''; ?>>Administrateur</option>
                 </select>
             </div>
             <div class="mb-4">

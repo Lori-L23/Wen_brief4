@@ -8,8 +8,8 @@
 </head>
 <body>
 <div class="flex items-center justify-center min-h-screen bg-gray-100">
-    <div class="p-8 rounded-lg shadow-md w-full max-w-md bg-white">
-        <h1 class="text-2xl font-bold mb-6 text-center text-purple-500">Inscription</h1>
+    <div class="p-8 rounded-lg shadoont-w-md w-full max-w-md bg-white">
+        <h1 class="text-2xl fbold mb-6 text-center text-purple-500">Inscription</h1>
         <?php if (isset($error)): ?>
             <div class="mb-4 text-red-500 text-center"><?php echo $error; ?></div>
         <?php endif; ?>
@@ -29,8 +29,8 @@
             <div class="mb-4">
                 <label for="role_id" class="block text-sm font-medium text-gray-700">Rôle:</label>
                 <select name="role_id" id="role_id" required class="mt-1 p-2 w-full border rounded-md focus:ring focus:ring-blue-200 focus:outline-none">
-                    <option value="1">Utilisateur</option>
-                    <option value="2">Administrateur</option>
+                    <option value="6">Utilisateur</option>
+                    <option value="1">Administrateur</option>
                 </select>
             </div>
             <div class="flex flex-col items-center">

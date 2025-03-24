@@ -17,15 +17,7 @@
             <li>
                 <a href="index.php?action=utilisateur" class="block hover:text-blue-300">Gérer les utilisateurs</a>
             </li>
-            <li>
-                <a href="index.php?action=addUser" class="block hover:text-blue-300">Ajouter un utilisateur</a>
-            </li>
-            <li>
-                <a href="index.php?action=editUser" class="block hover:text-blue-300">Modifier un utilisateur</a>
-            </li>
-            <li>
-                <a href="index.php?action=utilisateuruser" class="block hover:text-blue-300">Liste des utilisateurs</a>
-            </li>
+         
             <li>
                 <a href="index.php?action=sessions" class="block hover:text-blue-300">Historique des connexions</a>
             </li>
@@ -57,8 +49,8 @@
             <div class="mb-4">
                 <label for="role" class="block text-gray-700">Rôle:</label>
                 <select name="role" id="role" class="w-full p-2 border rounded">
-                    <option value="user">Utilisateur</option>
-                    <option value="admin">Administrateur</option>
+                    <option value="6">Utilisateur</option>
+                    <option value="1">Administrateur</option>
                 </select>
             </div>
             <button type="submit" class="bg-purple-500 text-white px-4 py-2 rounded">Ajouter</button>

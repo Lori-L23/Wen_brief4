@@ -11,10 +11,12 @@ class DashboardController {
     // Afficher le tableau de bord admin
     public function dashboardAdmin() {
         // Vérifier si l'utilisateur est un admin (exemple)
-        if (!Auth::isAdmin()) {
-            header('Location: index.php?action=login');
-            exit();
-        }
+        // if (!Auth::isAdmin()) {
+        //     header('Location: index.php?action=login');
+        //     exit();
+        // }
+
+    
 
         require_once __DIR__ . '/../views/dashboard/admin.php';
     }

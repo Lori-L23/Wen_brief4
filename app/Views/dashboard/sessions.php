@@ -17,15 +17,7 @@
             <li>
                 <a href="index.php?action=utilisateur" class="block hover:text-blue-300">Gérer les utilisateurs</a>
             </li>
-            <li>
-                <a href="index.php?action=addUser" class="block hover:text-blue-300">Ajouter un utilisateur</a>
-            </li>
-            <li>
-                <a href="index.php?action=editUser" class="block hover:text-blue-300">Modifier un utilisateur</a>
-            </li>
-            <li>
-                <a href="index.php?action=utilisateuruser" class="block hover:text-blue-300">Liste des utilisateurs</a>
-            </li>
+        
             <li>
                 <a href="index.php?action=sessions" class="block hover:text-blue-300">Historique des connexions</a>
             </li>

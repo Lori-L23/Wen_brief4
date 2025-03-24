@@ -41,7 +41,7 @@ switch ($action) {
     case 'addUser':
         $userController->addUser();
         break;
-    case 'editUser':
+    case 'edit':
         $id = $_GET['id'];
         $userController->editUser($id);
         break;

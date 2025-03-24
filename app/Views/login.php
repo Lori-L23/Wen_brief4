@@ -13,7 +13,7 @@
         <?php if (isset($error)): ?>
             <div class="mb-4 text-red-500 text-center"><?php echo $error; ?></div>
         <?php endif; ?>
-        <form action="index.php?action=login" method="POST">
+        <form method="POST" action="index.php?action=login">
             <div class="mb-4">
                 <label for="email" class="block text-sm font-medium text-gray-700">Email:</label>
                 <input type="email" name="email" id="email" required class="mt-1 p-2 w-full border rounded-md focus:ring focus:ring-blue-200 focus:outline-none">

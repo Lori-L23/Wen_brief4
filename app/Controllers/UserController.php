@@ -109,6 +109,10 @@ public function logoutuser() {
         header('Location: index.php?action=login');
         exit();
     }
+    else{
+        require_once __DIR__ . '../../Views/users/dashboard.php';
+
+    }
 
     // Récupérer les informations de l'utilisateur
     $user = $this->userModel->getUserById($_SESSION['user']['id']);

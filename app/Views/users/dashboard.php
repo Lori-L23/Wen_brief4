@@ -29,8 +29,8 @@
     <!-- Contenu principal -->
     <div class="flex-1 p-6">
         <h1 class="text-2xl font-bold mb-6">Tableau de bord</h1>
-        <?php if (isset($user)): ?>
-            <p>Bienvenue, <?php echo htmlspecialchars($user['username']); ?> !</p>
+        <?php if (isset($_SESSION['user'])): ?>
+            <p>Bienvenue, <?php echo htmlspecialchars($_SESSION['user']['username']); ?> !</p>
         <?php else: ?>
             <p>Erreur : Utilisateur non connecté.</p>
         <?php endif; ?>
