@@ -16,7 +16,7 @@
             </li>
 
             <li>
-                <a href="index.php?action=editProfile" class="block hover:text-blue-300">Modifier le profil</a>
+                <a href="index.php?action=editProfile" class="block hover:text-blue-300">le profil</a>
             </li>
             <li>
         

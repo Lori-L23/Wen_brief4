@@ -17,16 +17,7 @@
             <li>
                 <a href="index.php?action=utilisateur" class="block hover:text-blue-300">Gérer les utilisateurs</a>
             </li>
-            <li>
-                <a href="index.php?action=addUser" class="block hover:text-blue-300">Ajouter un utilisateur</a>
-            </li>
-            <li>
-                <a href="index.php?action=editUser" class="block hover:text-blue-300">Modifier un utilisateur</a>
-            </li>
-            <li>
-                <a href="index.php?action=utilisateuruser" class="block hover:text-blue-300">Liste des utilisateurs</a>
-            </li>
-        
+          
             <li>
                 <a href="index.php?action=sessions" class="block hover:text-blue-300">Historique des connexions</a>
             </li>
@@ -42,7 +33,7 @@
         <?php if (isset($error)): ?>
             <div class="mb-4 text-red-500"><?php echo $error; ?></div>
         <?php endif; ?>
-        <form action="index.php?action=editUser&id=<?php echo $user['id']; ?>" method="POST">
+        <form action="index.php?action=edit&id=<?php echo $user['id']; ?>" method="POST">
             <div class="mb-4">
                 <label for="username" class="block text-gray-700">Nom d'utilisateur:</label>
                 <input type="text" name="username" id="username" value="<?php echo $user['username']; ?>" required class="w-full p-2 border rounded">

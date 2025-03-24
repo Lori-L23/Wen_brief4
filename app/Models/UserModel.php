@@ -7,15 +7,23 @@ class UserModel {
     }
 
     public function authenticate($email, $password) {
-        $query = "SELECT * FROM users WHERE email = :email";
+        $query = "SELECT id, username, email, password, role_id FROM users WHERE email = :email LIMIT 1";
         $stmt = $this->db->prepare($query);
         $stmt->bindParam(':email', $email);
-        $stmt->execute();
+        
+        if (!$stmt->execute()) {
+            error_log("Erreur d'authentification: " . implode(" ", $stmt->errorInfo()));
+            return false;
+        }
+
         $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
         if ($user && password_verify($password, $user['password'])) {
+            // Ne retournez pas le mot de passe dans le tableau
+            unset($user['password']);
             return $user;
         }
+
         return false;
     }
  // Créer un utilisateur
@@ -35,7 +43,7 @@ class UserModel {
 
 // Modifier un utilisateur
 public function updateUser($id, $username, $email, $role, $is_active) {
-    $query = "UPDATE users SET username = :username, email = :email, role = :role, is_active = :is_active WHERE id = :id";
+    $query = "UPDATE users SET id = :id, username = :username, email = :email, role_id = :role_id, is_active = :is_active WHERE id = :id";
     $stmt = $this->db->prepare($query);
     $stmt->bindParam(':id', $id);
     $stmt->bindParam(':username', $username);

@@ -15,7 +15,7 @@
                 <a href="index.php?action=dashboard" class="block hover:text-blue-300">Tableau de bord</a>
             </li>
             <li>
-                <a href="index.php?action=editProfile" class="block hover:text-blue-300">Modifier le profil</a>
+                <a href="index.php?action=editProfile" class="block hover:text-blue-300"> le profil</a>
             </li>
             <li>
                 <a href="index.php?action=loginHistory" class="block hover:text-blue-300">Historique des connexions</a>
@@ -30,7 +30,9 @@
     <div class="flex-1 p-6">
         <h1 class="text-2xl font-bold mb-6">Tableau de bord</h1>
         <?php if (isset($_SESSION['user'])): ?>
-            <p>Bienvenue, <?php echo htmlspecialchars($_SESSION['user']['username']); ?> !</p>
+            <p>Bienvenue, <?php echo htmlspecialchars($_SESSION['user']['username']); ?> ! comment tu vas?</p>
+            <p>Hello, <?php echo htmlspecialchars($_SESSION['user']['username']); ?> ! How are you?</p>
+
         <?php else: ?>
             <p>Erreur : Utilisateur non connecté.</p>
         <?php endif; ?>

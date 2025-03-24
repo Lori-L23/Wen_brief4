@@ -3,6 +3,7 @@ require_once __DIR__ . '../../app/core/auth.php';
 require_once __DIR__ . '../../app/Controllers/AuthController.php';
 require_once __DIR__ . '../../app/controllers/DashboardController.php';
 require_once __DIR__ . '../../app/controllers/UserController.php';
+require_once __DIR__ . '../../app/controllers/LoginHistoryController.php';
 
 
 
@@ -13,7 +14,7 @@ $db = new PDO('mysql:host=localhost;dbname=gestion_utilisateurs', 'root', '');
 $authController = new AuthController($db);
 $dashboardController = new DashboardController($db);
 $userController = new UserController($db);
-
+$loginHistoryController = new loginHistoryController($db);
 
 
 switch ($action) {
@@ -69,7 +70,7 @@ switch ($action) {
         $userController->updateProfile();
         break;
     case 'loginHistory':
-        $userController->loginHistory();
+        $loginHistoryController->showHistory();
         break;
         // case 'logoutuser':
         //     $userController->logout();

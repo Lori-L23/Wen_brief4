@@ -15,7 +15,7 @@
                 <a href="index.php?action=dashboard" class="block hover:text-blue-300">Tableau de bord</a>
             </li>
             <li>
-                <a href="index.php?action=editProfile" class="block hover:text-blue-300">Modifier le profil</a>
+                <a href="index.php?action=editProfile" class="block hover:text-blue-300">le profil</a>
             </li>
             <li>
                 <a href="index.php?action=loginHistory" class="block hover:text-blue-300">Historique des connexions</a>

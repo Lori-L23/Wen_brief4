@@ -35,7 +35,8 @@
                 <tr>
                     <th class="py-2 px-4 border">ID</th>
                     <th class="py-2 px-4 border">Utilisateur</th>
-                    <th class="py-2 px-4 border">Date de connexion</th>
+                    <th class="py-2 px-4 border">heure de connexion</th>
+                    <th class="py-2 px-4 border">heure de deconnexion</th>
                 </tr>
             </thead>
             <tbody>
@@ -44,6 +45,7 @@
                         <td class="py-2 px-4 border"><?php echo $entry['id']; ?></td>
                         <td class="py-2 px-4 border"><?php echo $entry['user_id']; ?></td>
                         <td class="py-2 px-4 border"><?php echo $entry['login_time']; ?></td>
+                        <td class="py-2 px-4 border"><?php echo $entry['logout_time']; ?></td>
                     </tr>
                 <?php endforeach; ?>
             </tbody>
