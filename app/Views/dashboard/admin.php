@@ -18,7 +18,6 @@
                 <a href="index.php?action=utilisateur" class="block hover:text-blue-300">Gérer les utilisateurs</a>
             </li>
 
-
             <li>
                 <a href="index.php?action=sessions" class="block hover:text-blue-300">Historique des connexions</a>
             </li>

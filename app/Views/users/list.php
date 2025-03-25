@@ -50,10 +50,10 @@
                         <td class="py-2 px-4 border"><?php echo $user['username']; ?></td>
                         <td class="py-2 px-4 border"><?php echo $user['email']; ?></td>
                         <td class="py-2 px-4 border"><?php echo $user['role_id'] ?? 'Non défini'; ?></td>
-                        <td class="py-2 px-4 border"><?php echo $user['is_active'] ? 'Actif' : 'Inactif'; ?></td>
+                        <td class="py-2 px-4 border"><?php echo $user['is_active'] ? 'Inactif' : 'Actif'; ?></td>
                         <td class="py-2 px-4 border">
                             <a href="index.php?action=edit&id=<?php echo $user['id']; ?>" class="text-blue-500">Modifier</a>
-                            <a href="index.php?action=toggleUser&id=<?php echo $user['id']; ?>&is_active=<?php echo $user['is_active'] ? 0 : 1; ?>" class="text-green-500 ml-2">
+                            <a href="index.php?action=toggleUser&id=<?php echo $user['id']; ?>&is_active=<?php echo $user['is_active'] ? 1 : 0; ?>" class="text-green-500 ml-2">
                                 <?php echo $user['is_active'] ? 'Désactiver' : 'Activer'; ?>
                             </a>
                             <a href="index.php?action=deleteUser&id=<?php echo $user['id']; ?>" class="text-red-500 ml-2">Supprimer</a>
