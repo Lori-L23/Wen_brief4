@@ -36,9 +36,9 @@ WEN_BRIEF4/
                               ├── admin.php
                               ├── sessions.php
                               ├── users.php
-            ├── login.php
-            ├── register.php
-            │
+                ├── login.php
+                ├── register.php
+            
             └── core/
                 └── auth.php
 
